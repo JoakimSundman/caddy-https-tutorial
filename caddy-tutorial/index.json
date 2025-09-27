@@ -1,0 +1,38 @@
+{
+  "title": "Caddy HTTPS Tutorial",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Make docker containers",
+        "text": "step1/text.md",
+        "background": "step1/background.sh"
+      },
+      {
+        "title": "Create a web app",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "Create a caddy file",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "Run caddy with https",
+        "text": "step4/text.md"
+      },
+      {
+        "title": "Testing https",
+        "text": "step5/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  
+  }
+}
