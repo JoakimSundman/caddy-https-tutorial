@@ -6,25 +6,19 @@
     },
     "steps": [
       {
-        "title": "Make docker containers",
-        "text": "step1/text.md",
-        "background": "step1/background.sh"
+        "title": "Make docker containers"
       },
       {
-        "title": "Create a web app",
-        "text": "step2/text.md"
+        "title": "Create a web app"
       },
       {
-        "title": "Create a caddy file",
-        "text": "step3/text.md"
+        "title": "Create a caddy file"
       },
       {
-        "title": "Run caddy with https",
-        "text": "step4/text.md"
+        "title": "Run caddy with https"
       },
       {
-        "title": "Testing https",
-        "text": "step5/text.md"
+        "title": "Testing https"
       }
     ],
     "finish": {
