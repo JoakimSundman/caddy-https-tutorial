@@ -4,7 +4,7 @@ If you're still running a website or service over plain HTTP, you are exposing n
 
 To solve these issues we need to use HTTPS. Caddy is a tool that automates the entire certificate life cycle for you allowing all your websites and services to run on HTTPS.
 
-In this tutorial you will learn how to set up a basic webapp and how to set up Caddy and connect it to your webapp. To do this we will use docker and docker compose. 
+In this tutorial you will learn how to deploy a basic webapp and how to set up Caddy and connect it to your webapp. To do this we will use docker and docker compose. 
 
 Intended Learning Outcomes for this tutorial is: 
 - Understanding security risks with HTTP
