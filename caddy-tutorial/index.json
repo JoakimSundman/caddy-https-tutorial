@@ -2,7 +2,10 @@
   "title": "Caddy: Automated On-Demand HTTPS",
   "details": {
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "code": "bash",
+      "title": "Caddy: On-Demand TLS Setup",
+      "foreground": "setup.sh"
     },
     "steps": [
       {
