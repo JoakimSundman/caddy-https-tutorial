@@ -1,15 +1,16 @@
 {
-  "title": "Caddy HTTPS Tutorial",
+  "title": "Caddy: Automated On-Demand HTTPS",
   "details": {
     "intro": {
       "text": "intro.md"
     },
     "steps": [
       {
-        "title": "Make docker containers"
+        "title": "Introduction to IaC and On-Demand TLS",
+        "text": "background.md"
       },
       {
-        "title": "Create a web app"
+        "title": "Check prerequisites"
       },
       {
         "title": "Create a caddy file"
@@ -27,6 +28,5 @@
   },
   "backend": {
     "imageid": "ubuntu"
-  
   }
 }
