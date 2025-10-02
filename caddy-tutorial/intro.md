@@ -4,15 +4,17 @@ If you're still running a website or service over plain HTTP, you are exposing n
 
 To solve these issues we need to use HTTPS. Caddy is a tool that automates the entire certificate life cycle for you allowing all your websites and services to run on HTTPS.
 
-In this tutorial you will learn how to deploy a basic webapp and how to set up Caddy and connect it to your webapp. To do this we will use docker and docker compose. 
+For modern deployments, we rely on *Infrastructure as Code (IaC)* to define and automate our stack. Caddy's configuration file (Caddyfile) serves as a declarative policy for our security layer. 
 
-Intended Learning Outcomes for this tutorial is: 
-- Understanding security risks with HTTP
-- Be able to create a simple Dockerfile for web application 
-- Be able to configure Caddy as a reverse proxy 
-- Be able to write a basic Caddyfile 
-- Map ports 80 and 443 from the host to the Caddy container
-- Be able to mount a persistent Docker volume for Caddy to store certificates
-- Be able to deploy the secure application stack using a single docker compose up command 
-- Verify the live HTTPS connection and automatic HTTP-to-HTTPS redirect. 
-- Be able to inspect Docker and Caddy logs 
+A standard Caddy configuration requires listing every domain. For dynamic services like a *SaaS platform* or a *web host* that handles user-defined domains, this breaks the automation model. 
+
+This is where *On-Demand TLS* is essential. It extends our IaC capabilities by providing a scalable, hands-off solution: the server deines a security policy once and automatically provides HTTPS for any hostname on the fly, after checking an authorization endpoint. 
+
+*Intended Learning Outcomes*
+In this tutorial you will learn how to build an automated, self-securing IaC stack using Caddy and it's On-Demand TLS feature. You will learn to:
+- Understanding security risks with HTTP and the necessity of IaC automation.
+- Configure Caddy's global options to enable On-Demand TLS.
+- Implement the mandatory ask endpoint for authorization and abuse prevention.
+- Write a basic Caddyfile that acts as a declarative security policy.
+- Start Caddy and observe it issuing a certificate for a domain dynamically. 
+- Verify the live HTTPS connection.
