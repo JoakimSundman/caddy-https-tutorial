@@ -8,24 +8,22 @@ In short, **HTTPS is no longer optional** if you actually want to maintain user 
 
 ## **Background: Caddy, IaC, and the Scaling Problem**
 
-To solve these issues above we must implement HTTPS. Manually managing the entire lifecucle of **TLS/SSL certificates** (issuance, renewal, configuration) can be complex and prone to errors.
+To solve these issues above we must implement HTTPS. Manually managing the entire lifecycle of **TLS/SSL certificates** (issuance, renewal, configuration) can be complex and prone to errors.
 
 The **Caddy** webserver is a powerful and useful tool that automates the entire certificate life cycle for you allowing all your websites and services to run on HTTPS.
 
 For modern deployments, we rely on **Infrastructure as Code (IaC)** to define and automate our stack. Caddy's configuration file (`Caddyfile`) serves as a declarative policy for our security layer. 
 
-A standard Caddy configuration requires listing every domain. For dynamic services like a **SaaS platform** or a **web host** that handles user-defined domains, this breaks the automation model. 
-
 However, a standard Caddy configuration requires listing every domain explicity. This breaks the automation model for **dynamic services** like a **SaaS platform** or a **web host** that handles an ever-changing list of user-defined domains. 
 
-This is where **On-Demand TLS** is essential. It extends our IaC capabilities by providing a scalable, hands-off solution: the server deines a security policy once and automatically provides HTTPS for any hostname on the fly, after checking an authorization endpoint. 
+This is where **On-Demand TLS** is essential. It extends our IaC capabilities by providing a scalable, hands-off solution: the server defines a security policy once and automatically provides HTTPS for any hostname on the fly, after checking an authorization endpoint. 
 
 ## **Tutorial Overview**
 In this tutorial, we will first introduce the necessity of using Caddy for certificate automation. We will then transition to showing how Caddy's powerful **On-Demand TLS** feature can be integrated into a modern **IaC stack** using Docker Compose. Caddy will be run in a container, and we will define a clear, declarative security policy for it.
 
 **Intended Learning Outcomes**
 - Understanding security risks with HTTP and the necessity of IaC automation.
-- Set up docker-compose with Caddy and a Webapp
+- provide example of docker-compose with Caddy and a Webapp.
 - Configure Caddy's global options to enable On-Demand TLS.
 - Implement the mandatory ask endpoint for authorization and abuse prevention.
 - Write a basic Caddyfile that acts as a declarative security policy.
