@@ -35,6 +35,6 @@
   "environment": {
   "uilayout": "terminal",
   "uieditorpath": "/root",
-  "files": ["assets"]
+  "files": [{ "path": "assets", "target": "/root/assets" }]
   }
 }
