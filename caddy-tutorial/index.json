@@ -9,8 +9,8 @@
     },
     "steps": [
       {
-        "title": "Introduction to IaC and On-Demand TLS",
-        "text": "background.md"
+        "title": "Setting up a docker-compose file",
+        "text": "step1/step1.md"
       },
       {
         "title": "Check prerequisites"

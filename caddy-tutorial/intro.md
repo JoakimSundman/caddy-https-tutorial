@@ -23,7 +23,7 @@ In this tutorial, we will first introduce the necessity of using Caddy for certi
 
 **Intended Learning Outcomes**
 - Understanding security risks with HTTP and the necessity of IaC automation.
-- provide example of docker-compose with Caddy and a Webapp.
+- Provide example of docker-compose with Caddy and a Webapp.
 - Configure Caddy's global options to enable On-Demand TLS.
 - Implement the mandatory ask endpoint for authorization and abuse prevention.
 - Write a basic Caddyfile that acts as a declarative security policy.
