@@ -31,5 +31,10 @@
   },
   "backend": {
     "imageid": "ubuntu"
+  },
+  "environment": {
+  "uilayout": "terminal",
+  "uieditorpath": "/root",
+  "files": ["assets"]
   }
 }
