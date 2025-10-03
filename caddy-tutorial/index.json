@@ -27,6 +27,12 @@
     ],
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "caddy":[
+        {"file": "docker-compose.yml", "target": "~/"}
+      ]
+
     }
   },
   "backend": {
