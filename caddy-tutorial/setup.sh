@@ -11,11 +11,8 @@ apt install -y netcat > /dev/null 2>&1
 
 # Create working directory and html directory for webapp
 mkdir -p $WORKING_DIR/html
-
-# Copy all prepared assets from the scenario source into the working directory
-cp $ASSETS_DIR/Dockerfile $WORKING_DIR/
-cp $ASSETS_DIR/docker-compose.yml $WORKING_DIR/
-cp $ASSETS_DIR/html/index.html $WORKING_DIR/html/
+wget -O $WORKING_DIR/docker-compose.yml https://raw.githubusercontent.com/JoakimSundman/caddy-https-tutorial/main/caddy-tutorial/assets/docker-compose.yml
+wget -O $WORKING_DIR/html/index.html https://raw.githubusercontent.com/JoakimSundman/caddy-https-tutorial/main/caddy-tutorial/assets/html/index.html
 
 # Move user into working directory for scenario
 cd $WORKING_DIR
