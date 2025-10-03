@@ -17,4 +17,6 @@ wget -O $WORKING_DIR/html/index.html https://raw.githubusercontent.com/JoakimSun
 # Move user into working directory for scenario
 cd $WORKING_DIR
 
+clear
+
 echo "Setup complete! All files are in $WORKING_DIR"
