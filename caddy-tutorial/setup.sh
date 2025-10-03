@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WORKING_DIR="/root/caddy-on-demand-tls"
+WORKING_DIR="/root/caddy"
 
 echo "Setting up working directory at $WORKING_DIR (Ubuntu base)"
 
