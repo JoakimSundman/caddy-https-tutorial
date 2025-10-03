@@ -1,23 +1,26 @@
-version: '3.8'
-
+# Docker compose file for caddy server + site container
 services:
   caddy:
-    image: caddy:latest
-    container_name: caddy
+    image: caddy:2.10.2
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
     ports:
       - "80:80"
       - "443:443"
+      - "443:443/udp"
     volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile
+      - $PWD/conf:/etc/caddy
+      - $PWD/site:/srv
       - caddy_data:/data
       - caddy_config:/config
+
+  website:
+    build: .
+    expose:
+      - "80"                  
     restart: unless-stopped
 
-  app:
-    build:
-      context: .
-      dockerfile: docker.yml
-    container_name: web_app
-    expose:
-      - "80"
-    restart: unless-stopped
+volumes:
+  caddy_data:
+  caddy_config:
