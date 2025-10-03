@@ -10,10 +10,12 @@
     "steps": [
       {
         "title": "Prerequisites",
-        "text": "step0/step0.md"
+        "text": "step0.md"
       },
       {
-        "title": "Check prerequisites"
+        "title": "Setting up a docker-compose file",
+        "text": "step1.md",
+        "foreground": "setup1.sh"
       },
       {
         "title": "Create a caddy file"
