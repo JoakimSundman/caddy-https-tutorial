@@ -9,7 +9,7 @@ You do not need to remember this command, we will get to it later.
 ![step1](./assets/step1.png)
 
 Let's start by pulling up the docker compose file using the command `cat docker-compose.yml`.
-Similar to JSON files you can see that Yaml files are have a tree structure.
+Similar to JSON files you can see that Yaml files have a tree structure.
 The difference is yaml files use indents and not braces.
 
 We have declared two services in this file `caddy` and `website`.
