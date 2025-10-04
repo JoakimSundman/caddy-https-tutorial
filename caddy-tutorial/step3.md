@@ -4,8 +4,8 @@ Since we have created our Caddyfile we now need to fill it with our configuratio
 
 We first define how to handle any HTTP request on port 80. To define this use:
 
-`echo "localhost:80 { 
+```echo "localhost:80 { 
 redir https://localhost{uri} 
-} > Caddyfile`
+} > Caddyfile
 
 
