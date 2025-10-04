@@ -5,7 +5,7 @@
       "text": "intro.md",
       "code": "bash",
       "title": "Caddy: On-Demand TLS Setup",
-      "background": "setup.sh"
+      "foreground": "setup.sh"
     },
     "steps": [
       {
