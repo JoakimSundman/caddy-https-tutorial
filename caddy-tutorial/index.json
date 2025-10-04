@@ -15,7 +15,7 @@
       {
         "title": "Setting up a docker-compose file",
         "text": "step1.md",
-        "background": "setup1.sh"
+        "foreground": "setup1.sh"
       },
       {
         "title": "Creating a caddy file",
