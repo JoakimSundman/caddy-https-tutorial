@@ -12,7 +12,7 @@ through a docker compose filelater in the tutorial.
 
 If you are interested in the webserver and 
 how it is built you can use the command:
-`cat Dockerfile`
+`cat Dockerfile` to see how such a dockerfile looks.
 
-
+In our small file structure this is where we place the dockerfile.
 ![step0.1](./assets/step0.1.png)
