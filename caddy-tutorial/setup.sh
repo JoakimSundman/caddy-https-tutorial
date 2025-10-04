@@ -13,6 +13,7 @@ apt install -y netcat > /dev/null 2>&1
 mkdir -p $WORKING_DIR/site
 mkdir -p $WORKING_DIR/conf
 wget -O $ASSETS_DIR/docker-compose.yml https://raw.githubusercontent.com/JoakimSundman/caddy-https-tutorial/main/caddy-tutorial/assets/docker-compose.yml
+wget -O $ASSETS_DIR/Dockerfile https://raw.githubusercontent.com/JoakimSundman/caddy-https-tutorial/main/caddy-tutorial/assets/Dockerfile
 wget -O $WORKING_DIR/site/index.html https://raw.githubusercontent.com/JoakimSundman/caddy-https-tutorial/main/caddy-tutorial/assets/html/index.html
 
 # Move user into working directory for scenario
