@@ -7,10 +7,17 @@ We first define how to handle any HTTP request on port 80. To define this use:
 ```
 echo "localhost:80 { 
 redir https://localhost{uri} 
-}" > Caddyfile
+}
+" > Caddyfile
 ```
 
-The
+```
+echo "localhost:443 {
+  tls internal
+  reverse_proxy website:80
+} >> Caddyfile
+"
+```
 
 
 
