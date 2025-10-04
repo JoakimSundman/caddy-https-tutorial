@@ -15,11 +15,12 @@
       {
         "title": "Setting up a docker-compose file",
         "text": "step1.md",
-        "foreground": "setup1.sh"
+        "foreground": "step1.sh"
       },
       {
         "title": "Creating a caddy file",
-        "text": "step2.md"
+        "text": "step2.md",
+        "foregound": "step2.sh"
       },
       {
         "title": "Filling out the caddy file",
