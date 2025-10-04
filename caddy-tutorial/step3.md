@@ -7,7 +7,7 @@ We first define how to handle any HTTP request on port 80. To define this use:
 ```
 echo "localhost:80 { 
 redir https://localhost{uri} 
-} > Caddyfile
+}" > Caddyfile
 ```
 
 The
