@@ -3,10 +3,16 @@ This will be the overall file sturcture for the project.
 
 ![step0](./assets/step0.png)
 
-We assume you have or will make your own website or service, for this tutorial we will provide a simple webserver.
+We assume you have or will make your own website or service, 
+but for the purpose of demonstratrion we will provide a simple webserver in this tutorial.
+This webserver will be running in its own docker container and is made out
+of two parts, the `index.html` file, which is a super basic html file for a static webpage,
+and the dockerfile that creates a docker image that we will later run
+through a docker compose filelater in the tutorial.
 
-To see the dockerfile for the webserver you can use the command:
-
+If you are interested in the webserver and 
+how it is built you can use the command:
 `cat Dockerfile`
+
 
 ![step0.1](./assets/step0.1.png)
