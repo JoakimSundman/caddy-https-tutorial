@@ -5,7 +5,7 @@
       "text": "intro.md",
       "code": "bash",
       "title": "Caddy: On-Demand TLS Setup",
-      "foreground": "setup.sh"
+      "background": "setup.sh"
     },
     "steps": [
       {
@@ -15,7 +15,7 @@
       {
         "title": "Setting up a docker-compose file",
         "text": "step1.md",
-        "foreground": "setup1.sh"
+        "background": "setup1.sh"
       },
       {
         "title": "Creating a caddy file",
