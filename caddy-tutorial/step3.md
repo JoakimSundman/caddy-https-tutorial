@@ -19,8 +19,7 @@ This is the main block that handles secure traffic and sends it to your web appl
 echo "localhost:443 {
   tls internal
   reverse_proxy website:80
-} >> Caddyfile
-"
+}" >> Caddyfile
 ```
 
 After running both commands your Caddyfile should look like this: 
