@@ -1,5 +1,4 @@
 # Docker compose file for caddy server + site container
-# Docker compose file for caddy server + site container
 services:
   caddy:
     image: caddy:2.10.2
@@ -15,6 +14,18 @@ services:
       - $PWD/site:/srv
       - caddy_data:/data
       - caddy_config:/config
+
+  checker:
+    build: 
+      context: ./assets/checker
+    container_name: checker
+    restart: unless-stopped
+    expose:
+      - "9000"
+    volumes:
+      - ./assets/checker/domains:/app/domains:ro 
+    networks:
+      - webhost
 
   website:
     build: .
