@@ -1,4 +1,4 @@
-The next important step is to create the Caddyfile.
+The next important step is to create the Caddyfile. To do that and follow the structure, run the command: `cd conf`.
 
 ![step2-3](./assets/step2-3.png)
 

@@ -10,7 +10,15 @@ redir https://localhost{uri}
 }
 " > Caddyfile
 ```
-
+For actualy use to your domains instead of 
+```
+localhost:80
+``` 
+you use your own hostname e.g. 
+```
+example.com:80
+```
+But for the tutorial we will use localhost 
 ## The HTTPS Reverse prozy block 
 
 This is the main block that handles secure traffic and sends it to your web application. To write this to the Caddyfile without overwriting our earlier block use this command:
@@ -21,6 +29,16 @@ echo "localhost:443 {
   reverse_proxy website:80
 }" >> Caddyfile
 ```
+
+Again, instead of 
+```
+localhost:443
+```
+you use your own hostname e.g.
+```
+example.com:443
+```
+but for this tutorial keep localhost. 
 
 After running both commands your Caddyfile should look like this: 
 
