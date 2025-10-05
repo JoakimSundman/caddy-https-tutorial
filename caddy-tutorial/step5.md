@@ -9,11 +9,11 @@ We will then again create an empty Caddyfile using `touch Caddyfile`.
 
 Now when we have an empty Caddyfile we will add the on-demand TLS block with: 
 ```
-echo "{ 
-  tls { 
-    on_demand 
-    internal 
-  }
+echo "{
+    on_demand_tls {
+        ask http://checker:9000/check-domain
+    }
+    acme_ca internal
 }"
 
 > Caddyfile
@@ -32,7 +32,7 @@ echo ":80 {
 
 :443 {
   reverse_proxy website:80 
-}"
+}" >> Caddyfile
 ```
 Notice that here we don't define host as localhost instead as
 ```

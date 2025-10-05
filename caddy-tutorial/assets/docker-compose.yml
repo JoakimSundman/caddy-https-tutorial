@@ -23,7 +23,7 @@ services:
     expose:
       - "9000"
     volumes:
-      - ./assets/checker/domains:/app/domains:ro 
+      - ../assets/checker/domains:/app/domains:ro 
     networks:
       - webhost
 
