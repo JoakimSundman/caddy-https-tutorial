@@ -18,6 +18,10 @@ wget -O $ASSETS_DIR/checker/Dockerfile https://raw.githubusercontent.com/JoakimS
 wget -O $ASSETS_DIR/checker/domains/test1.com https://raw.githubusercontent.com/JoakimSundman/caddy-https-tutorial/main/caddy-tutorial/assets/checker/domains/test1.com
 wget -O $ASSETS_DIR/checker/domains/test1.net https://raw.githubusercontent.com/JoakimSundman/caddy-https-tutorial/main/caddy-tutorial/assets/checker/domains/test2.net
 
+echo "127.0.0.1    test1.com" >> /etc/hosts
+echo "127.0.0.1    test2.net" >> /etc/hosts
+echo "127.0.0.1    test3.com" >> /etc/hosts
+
 # Move user into working directory for scenario
 cd $WORKING_DIR
 
