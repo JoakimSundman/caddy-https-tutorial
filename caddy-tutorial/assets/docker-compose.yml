@@ -17,13 +17,13 @@ services:
 
   checker:
     build: 
-      context: ./assets/checker
+      context: ../assets/checker
     container_name: checker
     restart: unless-stopped
     expose:
       - "9000"
     volumes:
-      - ../assets/checker/domains:/app/domains:ro 
+      - ./assets/checker/domains:/app/domains:ro 
     networks:
       - webhost
 
