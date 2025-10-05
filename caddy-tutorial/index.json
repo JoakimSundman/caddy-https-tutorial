@@ -27,7 +27,8 @@
         "text": "step3.md"
       },
       {
-        "title": "Run caddy with basic https"
+        "title": "Run caddy with basic https",
+        "text": "step4.md"
       },
       {
         "title": "Enabling on-demand TLS"
