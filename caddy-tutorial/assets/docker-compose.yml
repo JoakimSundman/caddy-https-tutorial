@@ -24,8 +24,6 @@ services:
       - "9000"
     volumes:
       - ./assets/checker/domains:/app/domains:ro 
-    networks:
-      - webhost
 
   website:
     build: .
