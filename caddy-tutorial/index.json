@@ -20,7 +20,7 @@
       {
         "title": "Creating a caddy file",
         "text": "step2.md",
-        "foregound": "step2.sh"
+        "setup": "step2.sh"
       },
       {
         "title": "Filling out the caddy file",
