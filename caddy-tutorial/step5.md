@@ -14,9 +14,9 @@ echo "{
         ask http://checker:9000/check-domain
     }
     acme_ca internal
-}"
+}
 
-> Caddyfile
+"> Caddyfile
 ```
 In a real production setting instead of 
 ```
