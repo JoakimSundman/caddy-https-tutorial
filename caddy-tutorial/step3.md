@@ -12,14 +12,14 @@ redir https://localhost{uri}
 ```
 For actualy use to your domains instead of 
 ```
-localhost:80
+localhost:80 and https://localhost{uri}
 ``` 
 you use your own hostname e.g. 
 ```
-example.com:80
+example.com:80 and https://example.com{uri}
 ```
 But for the tutorial we will use localhost 
-## The HTTPS Reverse prozy block 
+## The HTTPS Reverse proxy block 
 
 This is the main block that handles secure traffic and sends it to your web application. To write this to the Caddyfile without overwriting our earlier block use this command:
 
@@ -34,7 +34,7 @@ Again, instead of
 ```
 localhost:443
 ```
-you use your own hostname e.g.
+you would use your own hostname e.g.
 ```
 example.com:443
 ```
