@@ -5,5 +5,5 @@ FROM nginx:1.27-alpine
 COPY site/index.html /usr/share/nginx/html/index.html
 
 
-EXPOSE 2020
+EXPOSE 80
 
