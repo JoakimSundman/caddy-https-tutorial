@@ -5,10 +5,6 @@ ASSETS_DIR="/root/assets"
 
 mkdir -p $ASSETS_DIR
 
-# Install netcat for security endpoint
-apt update > /dev/null 2>&1
-apt install -y netcat > /dev/null 2>&1
-
 # Create working directory and html directory for webapp
 mkdir -p $WORKING_DIR/site
 mkdir -p $WORKING_DIR/conf
