@@ -27,10 +27,16 @@
         "text": "step3.md"
       },
       {
-        "title": "Run caddy with https"
+        "title": "Run caddy with basic https"
       },
       {
-        "title": "Testing https"
+        "title": "Enabling on-demand TLS"
+      },
+      {
+        "title": "Restart Caddy"
+      },
+      {
+        "title": "Testing on-demand TLS"
       }
     ],
     "finish": {
