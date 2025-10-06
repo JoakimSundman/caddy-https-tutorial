@@ -19,6 +19,8 @@ services:
     restart: unless-stopped
     expose:
       - "9000"
+    environment: 
+      - PYTHONUNBUFFERED=1
     volumes:
       - ./assets/checker/domains:/app/domains:ro 
 
