@@ -1,4 +1,4 @@
-Lastly to now test that it works **(heads up the curl commands will not resolve and seem stuck)** by running `curl -k https://test1.com` and `curl -k https://test2.net` both of these will hang and not resovle since we haven't actually created any service which will serve these requests. So to actually see that this works we will read the logs of the checker. To do this run `docker logs checker` and you will see something along the lines of 
+Lastly to now test that it works **(heads up the curl commands will not resolve and seem stuck)** by running `curl -k https://test1.com` and `curl -k https://test2.net` both of these will hang and not resovle since we haven't actually created any service which will serve these requests. So to actually see that this works we will read the logs of the checker. To do this run `docker logs checker` and you will see something along the lines of:
 ```
 Starting domain checker on port 9000...
 172.18.0.4 - - [06/Oct/2025 10:59:19] "GET /check-domain?domain=test1.com HTTP/1.1" 200 -
