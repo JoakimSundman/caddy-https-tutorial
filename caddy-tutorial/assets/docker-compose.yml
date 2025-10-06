@@ -26,7 +26,7 @@ services:
     environment: 
       - PYTHONUNBUFFERED=1
     volumes:
-      - ./assets/checker/domains:/app/domains:ro 
+      - ../assets/checker/domains:/app/domains:ro 
 
   website:
     build: .
