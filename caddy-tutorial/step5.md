@@ -18,11 +18,11 @@ echo "{
 
 "> Caddyfile
 ```
-In a real production setting instead of 
+In a real production setting you would remove the line
 ```
 internal
 ```
-you would remove it and Caddy would use their service *Lets encrypt* which would check for domain ownage. 
+and Caddy would use the service *Lets encrypt* which would check for domain ownership and provide the correct certificate. 
 
 Now we need to add the redirect part and general catch all for both of the ports. We will do this using: 
 ```
