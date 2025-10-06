@@ -2,6 +2,9 @@
 services:
   caddy:
     image: caddy:2.10.2
+    depends_on: 
+      checker:
+        condition: service_started 
     restart: unless-stopped
     ports:
       - "80:80"
