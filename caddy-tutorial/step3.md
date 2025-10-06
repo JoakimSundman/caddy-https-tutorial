@@ -1,4 +1,4 @@
-Since we have created our Caddyfile we now need to fill it with our configuration. We will add two main blocks, similarily to the docker-compose.yml file, the Caddyfile uses an indented structure. 
+Since we have created our Caddyfile we now need to fill it with our configuration. We will add two main blocks, as opposed to the docker-compose.yml file, the Caddyfile uses braces instead of indents this should be familiar to most people who have some programming knowledge. 
 
 ## The HTTP redirect block 
 
