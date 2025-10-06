@@ -1,0 +1,1 @@
+Congratulations, you have now learnt how to set up basic Caddy for one webservice as well as how to use Caddy's on-demand TLS feature.  

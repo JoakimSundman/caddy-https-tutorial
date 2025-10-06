@@ -34,10 +34,12 @@
         "text": "step5.md"
       },
       {
-        "title": "Restart Caddy"
+        "title": "Restart Caddy",
+        "text": "step6.md"
       },
       {
-        "title": "Testing on-demand TLS"
+        "title": "Testing on-demand TLS",
+        "text": "step7.md"
       }
     ],
     "finish": {
