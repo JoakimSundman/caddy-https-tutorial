@@ -12,13 +12,14 @@ Let's start by pulling up the docker compose file using the command `cat docker-
 Similar to JSON files you can see that Yaml files have a tree structure.
 The difference is yaml files use indents and not braces.
 
-We have declared two services in this file `caddy` and `website`.
+We have declared three services in this file `caddy` and `website`.
 - **Caddy:** Is our caddy server and the `image` option tells docker to pull the docker image from
   the internet.
+- **Checker** Is a python server checking domains, don't worry about it for now as it will be addressed later in the tutorial. 
 - **Website:** Is the web service, this can ofcourse be another image but for
   this tutorial we will be building using the `Dockerfile`.
 
-Furthermore, each of the two service has some options, 
+Furthermore, each of the three services has some options, 
 since this is a caddy tutorial we will be focusing on the caddy options.
 the options are as follows:
 - **Restart:** the option is, as the name suggest, the restart policy for this particular container. The chosen option in this tutorial is `unless-stopped`
