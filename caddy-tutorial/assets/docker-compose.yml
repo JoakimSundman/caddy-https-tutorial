@@ -1,4 +1,4 @@
-# Docker compose file for caddy server + site container
+
 services:
   caddy:
     image: caddy:2.10.2
