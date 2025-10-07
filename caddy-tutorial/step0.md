@@ -1,4 +1,3 @@
-## **Step 0**
 This will be the overall file sturcture for the project.
 
 ![step0](./assets/step0.png)
