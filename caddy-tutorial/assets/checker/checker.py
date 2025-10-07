@@ -1,42 +1,33 @@
-from http.server import BaseHTTPRequestHandler, HTTPServer
-import os
+import http.server
 import urllib.parse
 
-# This path corresponds to the volume mount in docker-compose.yml
-DOMAIN_LIST_PATH = os.environ.get('DOMAIN_LIST_PATH', '/app/domains')
-CHECK_ENDPOINT = '/check-domain'
+allowed = ["test1.com", "test2.net"]
 
-class AskHandler(BaseHTTPRequestHandler):
+class DomainChecker(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
-        if self.path.startswith(CHECK_ENDPOINT):
-            parsed_url = urllib.parse.urlparse(self.path)
-            query_params = urllib.parse.parse_qs(parsed_url.query)
-            
-            requested_domain = query_params.get('domain', [None])[0]
+        url_components = urllib.parse.urlparse(self.path)
+        params = urllib.parse.parse_qs(url_components.query)
+        domain = params.get('domain', [None])[0]
+        
+        # Default response is DENIED (400)
+        status = 400
+        message = b'Domain Not Authorized'
 
-            if requested_domain:
-                domain_file_path = os.path.join(DOMAIN_LIST_PATH, requested_domain)
-                
-                if os.path.exists(domain_file_path):
-                    self.send_response(200)
-                    self.end_headers()
-                    self.wfile.write(b'Domain Authorized')
-                else:
-                    self.send_response(400)
-                    self.end_headers()
-                    self.wfile.write(b'Domain Not Authorized')
-            else:
-                self.send_response(400)
-                self.end_headers()
-                self.wfile.write(b'Missing domain parameter')
-        else:
-            self.send_response(404)
-            self.end_headers()
+        if domain in allowed:
+            status = 200
+            message = b'Domain Authorized'
 
-def run(server_class=HTTPServer, handler_class=AskHandler, port=9000):
+        self.send_response(status)
+        self.end_headers()
+        self.wfile.write(message)
+        
+        self.log_message('%s - - [%s] "%s" %d -', self.client_address[0], self.log_date_time_string(), self.requestline, status)
+
+# Standard Python server setup
+def run(port=9000):
     server_address = ('0.0.0.0', port)
-    httpd = server_class(server_address, handler_class)
-    print(f"Starting domain checker on port {port}...")
+    httpd = http.server.HTTPServer(server_address, DomainChecker)
+    print(f'Starting domain checker on port {port}...')
     httpd.serve_forever()
 
 if __name__ == '__main__':

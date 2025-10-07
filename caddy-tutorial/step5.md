@@ -18,11 +18,11 @@ echo "{
 
 "> Caddyfile
 ```
-To use this in a real production setting, you would have to make two changes: 1. Remove the 
+To use this in a real production setting, you would have to make two changes: 1. Remove  
 ```
 acme-ca internal
 ```
-line to enable public cetrificates from Let's encrypt. 
+to enable public cetrificates from Let's encrypt. 
 2. Update the **ask** endpoint to the production URL of your checker service. 
 
 Now we need to add the redirect part and general catch all for both of the ports. We will do this using: 
