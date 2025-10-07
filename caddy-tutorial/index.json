@@ -9,36 +9,36 @@
     },
     "steps": [
       {
-        "title": "Prerequisites",
+        "title": "Prerequisites 0/7",
         "text": "step0.md"
       },
       {
-        "title": "Setting up a docker-compose file",
+        "title": "Setting up a docker-compose file 1/7",
         "text": "step1.md",
         "foreground": "step1.sh"
       },
       {
-        "title": "Creating a caddy file",
+        "title": "Creating a caddy file 2/7",
         "text": "step2.md"
       },
       {
-        "title": "Filling out the caddy file",
+        "title": "Filling out the caddy file 3/7",
         "text": "step3.md"
       },
       {
-        "title": "Run caddy with basic https",
+        "title": "Run caddy with basic https 4/7",
         "text": "step4.md"
       },
       {
-        "title": "Enabling on-demand TLS",
+        "title": "Enabling on-demand TLS 5/7",
         "text": "step5.md"
       },
       {
-        "title": "Restart Caddy",
+        "title": "Restart Caddy 6/7",
         "text": "step6.md"
       },
       {
-        "title": "Testing on-demand TLS",
+        "title": "Testing on-demand TLS 7/7",
         "text": "step7.md"
       }
     ],
