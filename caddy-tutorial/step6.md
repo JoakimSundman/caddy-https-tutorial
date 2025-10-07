@@ -1,4 +1,4 @@
-Now that we have configured the Caddyfile to allow on-demand TLS we can try restarting docker-compose. Start by goig nback in the folder structure by using the command ``cd .`.
+Now that we have configured the Caddyfile to allow on-demand TLS we can try restarting docker-compose. Start by going back in the folder structure by using the command `cd .`.
 
 Afterwards use `docker-compose down` to turn the services off. 
 
