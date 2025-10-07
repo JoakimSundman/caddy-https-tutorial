@@ -6,7 +6,7 @@ Now we need to move into the **conf** folder again using `cd conf`.
 When we are in conf we will remove the current Caddyfile using `rm Caddyfile`.
 
 We will then again create an empty Caddyfile using `touch Caddyfile`.
-Before we add the code, we need to understand what the **ask** endpoint is. In a real production setting, such as a web hosting service or a Software as a Service  platform(SaaS) that allows users to map their own domains (like Shopify) the checker server plays a critical role. In this tutorial we provide a finished checker that has registered the domain *test1.com* and *test2.net*.
+Before we add the code, we need to understand what the ask endpoint is. In a real production setting, such as a webhosting service the ask endpoint asks a server if the user's domain is present. If the user's domain is present it will get a certificate automatically with on-demand TLS. The endpoint is provided in this tutorial as checker `http://checker:9000/check-domain`. Checker acts like a database, it get sent a link and it extracts the domain name and checks if it is present in a list.
 Now when we have an empty Caddyfile we will add the on-demand TLS block with: 
 ```
 echo "{
